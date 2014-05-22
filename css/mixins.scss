@@ -1,0 +1,36 @@
+/*
+	# Mixins
+*/
+
+
+@mixin box-shadow($h-shadow, $v-shadow, $blur, $spread, $color){
+	box-shadow: 		$h-shadow $v-shadow $blur $spread $color;
+	-webkit-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+	-moz-box-shadow: 	$h-shadow $v-shadow $blur $spread $color;
+	-ms-box-shadow: 	$h-shadow $v-shadow $blur $spread $color;
+	-o-box-shadow: 		$h-shadow $v-shadow $blur $spread $color;
+}
+
+@mixin box-shadow-inset($h-shadow, $v-shadow, $blur, $spread, $color){
+	box-shadow: 		inset $h-shadow $v-shadow $blur $spread $color;
+	-webkit-box-shadow: inset $h-shadow $v-shadow $blur $spread $color;
+	-moz-box-shadow: 	inset $h-shadow $v-shadow $blur $spread $color;
+	-ms-box-shadow: 	inset $h-shadow $v-shadow $blur $spread $color;
+	-o-box-shadow: 		inset $h-shadow $v-shadow $blur $spread $color;
+}
+
+@mixin transform($x-angle, $y-angle, $rotate_angle, $z){
+	transform: 			skew($x-angle, $y-angle) rotate($rotate_angle) translateZ($z);
+	-webkit-transform: 	skew($x-angle, $y-angle) rotate($rotate_angle) translateZ($z);
+	-moz-transform: 	skew($x-angle, $y-angle) rotate($rotate_angle) translateZ($z);
+	-ms-transform: 		skew($x-angle, $y-angle) rotate($rotate_angle) translateZ($z);
+	-o-transform: 		skew($x-angle, $y-angle) rotate($rotate_angle) translateZ($z);
+}
+
+@mixin background-linear($cor_1, $cor_2){
+	background-image: linear-gradient(to bottom, $cor_1, $cor_2);
+	background-image: -webkit-gradient(linear, 0 100%, 0 0, from($cor_1), to($cor_2));
+	background-image: -webkit-linear-gradient($cor_1, $cor_2);
+	background-image: -moz-linear-gradient($cor_1, $cor_2);
+	background-image: -o-linear-gradient($cor_1, $cor_2);
+}

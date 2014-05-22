@@ -1,0 +1,146 @@
+/*
+	# Logomarca do evento Front in Aracaju em CSS
+	# Por Gabriel Medina
+	# www.gabrielmedina.eti.br
+*/
+
+@import "mixins";
+
+*, *::before, *::after{
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	-o-box-sizing: border-box;  
+}
+
+.logo {
+	position: relative;
+	width: 400px;
+	height: 375px;
+	margin: 0 auto;
+}
+
+
+.position {
+	position: absolute;
+	content: "";
+	display: block;
+}
+
+
+.up {
+	position: relative;
+	top: 20px;
+
+	&:before {
+		@extend .position;
+		left: 155px;
+		z-index: 10; 
+
+		width: 44px;
+		height: 100px;
+
+		@include transform(-14deg, -14deg, 14deg, 0);
+		@include background-linear(#908d86, #78796b);
+		@include box-shadow(4px, 4px, 10px, -4px, rgba(0,0,0,.4));
+	}
+
+	&:after {
+		@extend .position;
+		left: 203px;
+		z-index: 1;
+
+		width: 44px;
+		height: 100px;
+		
+		@include transform(14deg, 14deg, -14deg, 0);		
+		@include background-linear(#363732, #363732);
+	}
+}
+
+
+.mid {
+	@extend .position;
+
+	top: 100px;
+	left: 90px;
+	z-index: 5;
+
+	width: 220px;
+	height: 34px;
+
+	@include transform(12deg, 6deg, 12deg, 0);
+	@include background-linear(#fb9832, #fe9730);
+	@include box-shadow(0, 5px, 15px, 0, rgba(0,0,0,.1));
+}
+
+
+.down {
+	position: absolute;
+	top: 80px;
+	left: 0;
+
+	&:before {
+		@extend .position;
+		top: 70px;
+		left: 135px;
+
+		width: 40px;
+		height: 205px;		  
+		
+		@include transform(30deg, -8deg, 8deg, 0);
+		@include background-linear(#f15433, #a0412b);
+		@include box-shadow-inset(0, -20px, 20px, 0, rgba(0,0,0,.1));
+	}
+
+	&:after {
+		@extend .position;
+		top: 70px;
+	  	left: 225px; 
+
+		width: 40px;
+		height: 205px; 
+	  
+		@include transform(-30deg, 8deg, -8deg, 0);
+		@include background-linear(#f15433, #ed3626);
+		@include box-shadow-inset(-8px, 25px, 20px, -10px, rgba(0,0,0,.4));
+	}
+}
+
+
+
+/* Google Fonts */
+
+@font-face {
+	font-family: 'Shanti';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Shanti'), url(http://themes.googleusercontent.com/static/fonts/shanti/v5/YXI2DWvNHH4E3kHi_10pZw.woff) format('woff');
+}
+
+
+/* Conteúdo */
+
+body {
+	color: #78796b;
+	font-family: 'Shanti', sans-serif;
+	background-color: #f5f5f5;
+}
+
+h1 {
+	cursor: default;
+	font-size: 3em;
+	text-align: center;
+	margin: 20px 0 0;
+}
+
+footer {
+	cursor: default;
+	color: #908d86;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+a {
+	color: #908d86;
+}
