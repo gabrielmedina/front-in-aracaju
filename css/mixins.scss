@@ -5,7 +5,7 @@
 
 @mixin box-shadow($h-shadow, $v-shadow, $blur, $spread, $color){
 	box-shadow: 		$h-shadow $v-shadow $blur $spread $color;
-	-webkit-box-shadow: $h-shadow $v-shadow $blur $spread $color;
+	-webkit-box-shadow: 	$h-shadow $v-shadow $blur $spread $color;
 	-moz-box-shadow: 	$h-shadow $v-shadow $blur $spread $color;
 	-ms-box-shadow: 	$h-shadow $v-shadow $blur $spread $color;
 	-o-box-shadow: 		$h-shadow $v-shadow $blur $spread $color;
@@ -13,14 +13,14 @@
 
 @mixin box-shadow-inset($h-shadow, $v-shadow, $blur, $spread, $color){
 	box-shadow: 		inset $h-shadow $v-shadow $blur $spread $color;
-	-webkit-box-shadow: inset $h-shadow $v-shadow $blur $spread $color;
+	-webkit-box-shadow: 	inset $h-shadow $v-shadow $blur $spread $color;
 	-moz-box-shadow: 	inset $h-shadow $v-shadow $blur $spread $color;
 	-ms-box-shadow: 	inset $h-shadow $v-shadow $blur $spread $color;
 	-o-box-shadow: 		inset $h-shadow $v-shadow $blur $spread $color;
 }
 
 @mixin transform($x-angle, $y-angle, $rotate_angle, $z){
-	transform: 			skew($x-angle, $y-angle) rotate($rotate_angle) translateZ($z);
+	transform: 		skew($x-angle, $y-angle) rotate($rotate_angle) translateZ($z);
 	-webkit-transform: 	skew($x-angle, $y-angle) rotate($rotate_angle) translateZ($z);
 	-moz-transform: 	skew($x-angle, $y-angle) rotate($rotate_angle) translateZ($z);
 	-ms-transform: 		skew($x-angle, $y-angle) rotate($rotate_angle) translateZ($z);
